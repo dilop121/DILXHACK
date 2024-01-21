@@ -40,7 +40,7 @@ async def start(event):
 @bot.on(events.CallbackQuery())
 async def callback_handler(event):
     data = event.data.decode("utf-8")
-    chat_id = event.message.chat_id
+    chat_id = event.chat_id
 
     if data == "owner":
         await bot.send_message(chat_id, "This is the owner link: [Owner Link](https://t.me/dil_sagar_121)")
