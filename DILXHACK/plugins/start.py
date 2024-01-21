@@ -1,6 +1,7 @@
 import env
 import os
 import random
+from telethon.tl.custom import CallbackQuery
 from telethon.tl.custom import Button
 from telethon.tl.types import InputMediaPhoto
 from DILXHACK import bot
@@ -36,6 +37,19 @@ async def start(event):
     
     if env.LOG_GROUP_ID:
         await bot.send_message(env.LOG_GROUP_ID, f'{mention} Has Just Started The Bot')
+
+@bot.on(events.CallbackQuery())
+async def callback_handler(event):
+    data = event.data.decode("utf-8")
+    chat_id = event.message.chat_id
+
+    if data == "owner":
+        await bot.send_message(chat_id, "This is the owner link: [Owner Link](https://t.me/dil_sagar_121)")
+    
+    elif data == "support":
+        await bot.send_message(chat_id, "This is the support link: [Support Link](https://t.me/alonegroup121)")
+
+
 
 
 
