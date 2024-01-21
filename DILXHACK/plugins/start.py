@@ -1,6 +1,7 @@
 import env
 import os
 import random
+from telethon.tl.custom import Button
 from telethon.tl.types import InputMediaPhoto
 from DILXHACK import bot
 from DILXHACK.helpers import MENU1, KEYBOARD1
