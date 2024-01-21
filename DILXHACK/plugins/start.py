@@ -1,7 +1,7 @@
 import env
 import os
 import random
-from telethon.tl.custom import CallbackQuery
+from telethon.tl.types import CallbackQuery
 from telethon.tl.custom import Button
 from telethon.tl.types import InputMediaPhoto
 from DILXHACK import bot
