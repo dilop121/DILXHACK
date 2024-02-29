@@ -1,6 +1,7 @@
 import env
 import os
 import random
+import asyncio
 from telethon.tl.custom import Button
 from telethon.tl.types import InputMediaPhoto
 from DILXHACK import bot
@@ -58,6 +59,7 @@ async def callback_handler(event):
         await event.edit(text="● ● ◌")
         await event.edit(text="● ● ●")
         await event.edit(buttons=buttons)
+        await asyncio.sleep(60)
         await event.delete()
 
     elif data == "hack":
