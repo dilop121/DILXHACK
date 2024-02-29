@@ -23,7 +23,8 @@ async def start(event):
     TEXT = "ʀᴀᴍ ʀᴀᴍ {} 🚩,\n ɪ ᴀᴍ sᴇssɪᴏɴ ʜᴀᴄᴋ ʙᴏᴛ ғᴏʀ ʙᴏᴛʜ ᴘʏʀᴘɢʀᴀᴍ ᴀɴᴅ ᴛᴇʟᴇᴛʜᴏɴ sᴇssɪᴏɴ sᴛʀɪɴɢs.\n ᴛʏᴘᴇ /hack ᴏʀ ᴄʟɪᴄᴋ ᴏɴ ʜᴀᴄᴋ ʙᴜᴛᴛᴏɴ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴇɴᴜ"
     
     buttons = [
-        [Button.inline("ʜᴀᴄᴋ", data="hack"), Button.inline("ᴀʙᴏᴜᴛ", data="about")],     
+        [Button.inline("ʜᴀᴄᴋ", data="hack"), Button.inline("ᴀʙᴏᴜᴛ", data="about")],
+        [Button.inline("ᴛᴇʟᴇɢʀᴀᴘʜ", data="telegraph")]
     ]
     
     photo_urls = [
@@ -63,6 +64,10 @@ async def callback_handler(event):
 
     elif data == "play_video":
         await bot.send_file(chat_id, "https://telegra.ph/file/2e0d941212829173c69e8.mp4", caption="ʙʜᴏsᴀᴅɪᴋᴇ ᴛᴜ ᴛᴏ ɴɪᴋʟᴀ ɢᴀᴅᴅᴀʀ ᴊᴀᴀ ᴋᴀʀʟᴇ ʜᴀᴄᴋ ᴊᴇᴇ ʟᴇ ᴢɪɴᴅᴀɢɪ")
+
+    elif data == "telegraph": 
+        random_photo_url = random.choice(photo_urls)
+        await bot.send_file(chat_id, random_photo_url, caption="Caption for the random image")
 
 
 
