@@ -28,10 +28,10 @@ async def start(event):
     ]
     
     photo_urls = [
-        "https://graph.org/file/37077de233a43b6da9cee.jpg",
-        "https://graph.org/file/acb802ec1b54e02d4e692.jpg",
-        "https://graph.org/file/2e84b98fe4bdb0b53807e.jpg",
-        "https://graph.org/file/8883ddb847f34cdf0420d.jpg",
+        "https://graph.org/file/210751796ff48991b86a3.jpg",
+        "https://graph.org/file/7b4924be4179f70abcf33.jpg",
+        "https://graph.org/file/f6d8e64246bddc26b4f66.jpg",
+        "https://graph.org/file/9f12dc2a668d40875deb5.jpg",
     ]
     
     random_photo_url = random.choice(photo_urls)
