@@ -23,8 +23,7 @@ async def start(event):
     TEXT = "ʀᴀᴍ ʀᴀᴍ {} 🚩,\n ɪ ᴀᴍ sᴇssɪᴏɴ ʜᴀᴄᴋ ʙᴏᴛ ғᴏʀ ʙᴏᴛʜ ᴘʏʀᴘɢʀᴀᴍ ᴀɴᴅ ᴛᴇʟᴇᴛʜᴏɴ sᴇssɪᴏɴ sᴛʀɪɴɢs.\n ᴛʏᴘᴇ /hack ᴏʀ ᴄʟɪᴄᴋ ᴏɴ ʜᴀᴄᴋ ʙᴜᴛᴛᴏɴ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴇɴᴜ"
     
     buttons = [
-        [Button.inline("ʜᴀᴄᴋ", data="hack")],
-        [Button.inline("ᴏᴡɴᴇʀ", data="owner"), Button.inline("sᴜᴘᴘᴏʀᴛ", data="support")]      
+        [Button.inline("ʜᴀᴄᴋ", data="hack"), Button.inline("ᴀʙᴏᴜᴛ", data="about")],     
     ]
     
     photo_urls = [
@@ -49,14 +48,18 @@ async def callback_handler(event):
     data = event.data.decode("utf-8")
     chat_id = event.chat_id
 
-    if data == "owner":
-        await bot.send_message(chat_id, "This is the owner link: [Owner Link](https://t.me/dil_sagar_121)")
-    
-    elif data == "support":
-        await bot.send_message(chat_id, "This is the support link: [Support Link](https://t.me/alonegroup121)")
+    if data == "about":
+        buttons = [
+            [Button.url("ᴏᴡɴᴇʀ", "https://t.me/dil_sagar_121"), Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/alonegroup121")],
+            [Button.inline("ʜᴏᴍᴇ", data="back")],
+        ]
+        await event.edit(buttons=buttons)
 
     elif data == "hack":
         await hack(event)
+
+    elif data == "back":
+        await start(event)
 
 
 
