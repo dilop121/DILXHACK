@@ -20,7 +20,7 @@ async def hack(event):
 async def start(event):
     id = event.sender_id
     mention = f"[{event.sender.first_name}](tg://user?id={id})"
-    TEXT = "Hey {}, I am a Session Hacker Bot Supporting Both Pyrogram and Telethon Session String. Type /hack to see menu"
+    TEXT = "ʀᴀᴍ ʀᴀᴍ {} 🚩,\n ɪ ᴀᴍ sᴇssɪᴏɴ ʜᴀᴄᴋ ʙᴏᴛ ғᴏʀ ʙᴏᴛʜ ᴘʏʀᴘɢʀᴀᴍ ᴀɴᴅ ᴛᴇʟᴇᴛʜᴏɴ sᴇssɪᴏɴ sᴛʀɪɴɢs.\n ᴛʏᴘᴇ /hack ᴏʀ ᴄʟɪᴄᴋ ᴏɴ ʜᴀᴄᴋ ʙᴜᴛᴛᴏɴ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴇɴᴜ"
     
     buttons = [
         [Button.inline("ʜᴀᴄᴋ", data="hack")],
