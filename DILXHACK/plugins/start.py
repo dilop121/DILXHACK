@@ -54,6 +54,10 @@ async def callback_handler(event):
             [Button.url("ᴏᴡɴᴇʀ", "https://t.me/dil_sagar_121"), Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/alonegroup121")],
             [Button.inline("• ᴄʟᴏsᴇ •", data="close"), Button.inline("ᴍᴀsᴛɪ", data="play_video")],
         ]
+        await event.edit(text="● ◌ ◌")
+        await event.edit(text="● ● ◌")
+        await event.edit(text="● ● ●")
+        await event.delete()
         await event.edit(buttons=buttons)
 
     elif data == "hack":
