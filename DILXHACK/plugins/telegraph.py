@@ -1,4 +1,4 @@
-from telethon.tl.custom import ButtonInlineKeyboard
+from telethon.tl.custom import Button
 from telethon import TelegramClient, events
 from telegraph import Telegraph, upload_file
 from DILXHACK import bot
@@ -51,15 +51,13 @@ async def telegraph_upload(event):
         return
     await text.edit(
         text=f"<b>Link :-</b>\n\n<code>https://graph.org{response[0]}</code>",
-        reply_markup=ButtonInlineKeyboard(
-            [
+        buttons =  [
                 [
-                    ButtonInlineKeyboard(text="ᴏᴘᴇɴ ʟɪɴᴋ", url=f"https://graph.org{response[0]}"),
-                    ButtonInlineKeyboard(text="ꜱʜᴀʀᴇ ʟɪɴᴋ", url=f"https://telegram.me/share/url?url=https://graph.org{response[0]}")
+                    Button.inline("ᴏᴘᴇɴ ʟɪɴᴋ", url=f"https://graph.org{response[0]}"),
+                    Button.inline("ꜱʜᴀʀᴇ ʟɪɴᴋ", url=f"https://telegram.me/share/url?url=https://graph.org{response[0]}")
                 ],
                 [
-                    ButtonInlineKeyboard(text="⬴ ᴄʟᴏꜱᴇ ᴛʜɪꜱ ᴍᴇɴᴜ ⤀", callback_data="close_data")
+                    Button.inline("⬴ ᴄʟᴏꜱᴇ ᴛʜɪꜱ ᴍᴇɴᴜ ⤀", callback_data="close_data")
                 ]
             ]
         )
-    )
