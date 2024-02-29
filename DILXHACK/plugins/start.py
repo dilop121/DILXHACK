@@ -51,15 +51,15 @@ async def callback_handler(event):
     if data == "about":
         buttons = [
             [Button.url("ᴏᴡɴᴇʀ", "https://t.me/dil_sagar_121"), Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/alonegroup121")],
-            [Button.inline("ʜᴏᴍᴇ", data="back")],
+            [Button.inline("ʜᴏᴍᴇ", data="close")],
         ]
         await event.edit(buttons=buttons)
 
     elif data == "hack":
         await hack(event)
 
-    elif data == "back":
-        await start(event)
+    elif data == "close":
+        await event.delete()
 
 
 
