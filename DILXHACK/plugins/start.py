@@ -73,7 +73,7 @@ async def callback_handler(event):
         "https://graph.org/file/9f12dc2a668d40875deb5.jpg",
     ]
         random_photo_url = random.choice(dil_urls)
-        await bot.send_file(chat_id, random_photo_url, caption="ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴅᴏ ɪᴛ ʟɪᴋᴇ ᴛʜɪs ...\n • /tgm ➛ ᴛᴏ ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ᴍᴇᴅɪᴀ ʟɪɴᴋ")
+        await bot.send_file(chat_id, random_photo_url, caption="ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴅᴏ ɪᴛ ʟɪᴋᴇ ᴛʜɪs ...\n\n• /tgm ➛ ᴛᴏ ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ᴍᴇᴅɪᴀ ʟɪɴᴋ")
 
 
 
