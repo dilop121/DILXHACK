@@ -66,8 +66,14 @@ async def callback_handler(event):
         await bot.send_file(chat_id, "https://telegra.ph/file/2e0d941212829173c69e8.mp4", caption="ʙʜᴏsᴀᴅɪᴋᴇ ᴛᴜ ᴛᴏ ɴɪᴋʟᴀ ɢᴀᴅᴅᴀʀ ᴊᴀᴀ ᴋᴀʀʟᴇ ʜᴀᴄᴋ ᴊᴇᴇ ʟᴇ ᴢɪɴᴅᴀɢɪ")
 
     elif data == "telegraph": 
-        random_photo_url = random.choice(photo_urls)
-        await bot.send_file(chat_id, random_photo_url, caption="Caption for the random image")
+        dil_urls = [
+        "https://graph.org/file/210751796ff48991b86a3.jpg",
+        "https://graph.org/file/7b4924be4179f70abcf33.jpg",
+        "https://graph.org/file/f6d8e64246bddc26b4f66.jpg",
+        "https://graph.org/file/9f12dc2a668d40875deb5.jpg",
+    ]
+        random_photo_url = random.choice(dil_urls)
+        await bot.send_file(chat_id, random_photo_url, caption="ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴅᴏ ɪᴛ ʟɪᴋᴇ ᴛʜɪs ...\n • /tgm ➛ ᴛᴏ ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ᴍᴇᴅɪᴀ ʟɪɴᴋ")
 
 
 
