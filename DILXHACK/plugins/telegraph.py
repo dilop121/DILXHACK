@@ -56,8 +56,5 @@ async def telegraph_upload(event):
                     Button.url("ᴏᴘᴇɴ ʟɪɴᴋ", url=f"https://graph.org{response[0]}"),
                     Button.url("ꜱʜᴀʀᴇ ʟɪɴᴋ", url=f"https://telegram.me/share/url?url=https://graph.org{response[0]}")
                 ],
-                [
-                    Button.inline("⬴ ᴄʟᴏꜱᴇ ᴛʜɪꜱ ᴍᴇɴᴜ ⤀", callback_data="close_data")
-                ]
             ]
         )
