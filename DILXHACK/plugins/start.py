@@ -23,8 +23,8 @@ async def start(event):
     TEXT = "Hey {}, I am a Session Hacker Bot Supporting Both Pyrogram and Telethon Session String. Type /hack to see menu"
     
     buttons = [
-        [Button.inline("ᴏᴡɴᴇʀ", data="owner"), Button.inline("sᴜᴘᴘᴏʀᴛ", data="support")],
-        [Button.inline("ʜᴀᴄᴋ", data="hack")]
+        [Button.inline("ʜᴀᴄᴋ", data="hack")],
+        [Button.inline("ᴏᴡɴᴇʀ", data="owner"), Button.inline("sᴜᴘᴘᴏʀᴛ", data="support")]      
     ]
     
     photo_urls = [
