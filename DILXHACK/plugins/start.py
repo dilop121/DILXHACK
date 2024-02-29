@@ -48,6 +48,7 @@ async def start(event):
 async def callback_handler(event):
     data = event.data.decode("utf-8")
     chat_id = event.chat_id
+    query = event.query
 
     if data == "about":
         buttons = [
