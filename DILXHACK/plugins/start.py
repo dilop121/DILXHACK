@@ -10,6 +10,12 @@ from DILXHACK.database import DB
 from telethon import events
 
 
+async def hack(event):
+    if not event.is_private:
+        return await event.reply("You can't use me in groups.")
+    await event.reply(MENU1, buttons=KEYBOARD1)
+
+
 @bot.on(events.NewMessage(pattern="/start"))
 async def start(event):
     id = event.sender_id
@@ -17,7 +23,8 @@ async def start(event):
     TEXT = "Hey {}, I am a Session Hacker Bot Supporting Both Pyrogram and Telethon Session String. Type /hack to see menu"
     
     buttons = [
-        [Button.inline("Owner", data="owner"), Button.inline("Support", data="support")],
+        [Button.inline("ᴏᴡɴᴇʀ", data="owner"), Button.inline("sᴜᴘᴘᴏʀᴛ", data="support")],
+        [Button.inline("ʜᴀᴄᴋ", data="hack")]
     ]
     
     photo_urls = [
@@ -48,7 +55,8 @@ async def callback_handler(event):
     elif data == "support":
         await bot.send_message(chat_id, "This is the support link: [Support Link](https://t.me/alonegroup121)")
 
-
+    elif data == "hack":
+        await hack(event)
 
 
 
