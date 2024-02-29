@@ -51,8 +51,7 @@ async def callback_handler(event):
     if data == "about":
         buttons = [
             [Button.url("ᴏᴡɴᴇʀ", "https://t.me/dil_sagar_121"), Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/alonegroup121")],
-            [Button.url("Repo", "https://telegra.ph/file/2e0d941212829173c69e8.mp4")],
-            [Button.inline("ʜᴏᴍᴇ", data="close")],
+            [Button.inline("• ᴄʟᴏsᴇ •", data="close"), Button.inline("ᴍᴀsᴛɪ", data="play_video")],
         ]
         await event.edit(buttons=buttons)
 
@@ -61,6 +60,9 @@ async def callback_handler(event):
 
     elif data == "close":
         await event.delete()
+
+    elif data == "play_video":
+        await bot.send_file(chat_id, "https://telegra.ph/file/2e0d941212829173c69e8.mp4", caption="ʙʜᴏsᴀᴅɪᴋᴇ ᴛᴜ ᴛᴏ ɴɪᴋʟᴀ ɢᴀᴅᴅᴀʀ ᴊᴀᴀ ᴋᴀʀʟᴇ ʜᴀᴄᴋ ᴊᴇᴇ ʟᴇ ᴢɪɴᴅᴀɢɪ")
 
 
 
