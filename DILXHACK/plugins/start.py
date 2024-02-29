@@ -51,6 +51,7 @@ async def callback_handler(event):
     if data == "about":
         buttons = [
             [Button.url("ᴏᴡɴᴇʀ", "https://t.me/dil_sagar_121"), Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/alonegroup121")],
+            [Button.url("Repo", "https://telegra.ph/file/2e0d941212829173c69e8.mp4")],
             [Button.inline("ʜᴏᴍᴇ", data="close")],
         ]
         await event.edit(buttons=buttons)
