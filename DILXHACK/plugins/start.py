@@ -57,8 +57,8 @@ async def callback_handler(event):
         await event.edit(text="● ◌ ◌")
         await event.edit(text="● ● ◌")
         await event.edit(text="● ● ●")
-        await event.delete()
         await event.edit(buttons=buttons)
+        await event.delete()
 
     elif data == "hack":
         await hack(event)
