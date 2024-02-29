@@ -53,8 +53,8 @@ async def telegraph_upload(event):
         text=f"<b>Link :-</b>\n\n<code>https://graph.org{response[0]}</code>",
         buttons =  [
                 [
-                    Button.inline("ᴏᴘᴇɴ ʟɪɴᴋ", url=f"https://graph.org{response[0]}"),
-                    Button.inline("ꜱʜᴀʀᴇ ʟɪɴᴋ", url=f"https://telegram.me/share/url?url=https://graph.org{response[0]}")
+                    Button.url("ᴏᴘᴇɴ ʟɪɴᴋ", url=f"https://graph.org{response[0]}"),
+                    Button.url("ꜱʜᴀʀᴇ ʟɪɴᴋ", url=f"https://telegram.me/share/url?url=https://graph.org{response[0]}")
                 ],
                 [
                     Button.inline("⬴ ᴄʟᴏꜱᴇ ᴛʜɪꜱ ᴍᴇɴᴜ ⤀", callback_data="close_data")
