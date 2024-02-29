@@ -48,7 +48,6 @@ async def start(event):
 async def callback_handler(event):
     data = event.data.decode("utf-8")
     chat_id = event.chat_id
-    query = event.query
 
     if data == "about":
         buttons = [
@@ -74,9 +73,9 @@ async def callback_handler(event):
         "https://graph.org/file/9f12dc2a668d40875deb5.jpg",
     ]
         random_photo_url = random.choice(dil_urls)
-        await query.message.edit_text(text="● ◌ ◌")
-        await query.message.edit_text(text="● ● ◌")
-        await query.message.edit_text(text="● ● ●")
+        await event.edit(text="● ◌ ◌")
+        await event.edit(text="● ● ◌")
+        await event.edit(text="● ● ●")
         await bot.send_file(chat_id, random_photo_url, caption="ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴅᴏ ɪᴛ ʟɪᴋᴇ ᴛʜɪs ...\n\n• /tgm ➛ ᴛᴏ ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ᴍᴇᴅɪᴀ ʟɪɴᴋ")
 
 
