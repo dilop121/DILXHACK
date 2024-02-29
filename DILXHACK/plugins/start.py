@@ -76,6 +76,7 @@ async def callback_handler(event):
         await event.edit(text="● ◌ ◌")
         await event.edit(text="● ● ◌")
         await event.edit(text="● ● ●")
+        await event.delete()
         await bot.send_file(chat_id, random_photo_url, caption="ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴅᴏ ɪᴛ ʟɪᴋᴇ ᴛʜɪs ...\n\n• /tgm ➛ ᴛᴏ ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ᴍᴇᴅɪᴀ ʟɪɴᴋ")
 
 
